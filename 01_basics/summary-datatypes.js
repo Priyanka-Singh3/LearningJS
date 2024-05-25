@@ -18,4 +18,11 @@ const myFunc = function() {
 
 console.log(typeof cartoons)
 //Reference (Non-primitive)
-//Array, objects, Functions
+//Array, objects, Functions => data type = object
+
+//+++++++++++++++++++++++++++++++++++ Memory
+//Stack (Primitive) => copy , Heap(Non-Primitive) => reference
+
+
+
+
