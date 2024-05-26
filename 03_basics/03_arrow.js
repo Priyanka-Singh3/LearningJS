@@ -20,3 +20,5 @@ const f = ()=>{
 //when we have single line statements
 //i.e, implicit return
 const add = (n1, n2) => (n1+n2)
+
+const funcAdd = (n1, n2) => ({username: "priyanka"})
