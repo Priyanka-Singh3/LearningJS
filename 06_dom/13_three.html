@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: black; color: white;">
+    
+</body>
+<script>
+    //****** to create an element h1, div or anything ********
+    const div = document.createElement('div')
+    console.log(div) //<div></div>
+
+
+    //****** to set class names, id , attributes *******
+    div.className = 'main'
+    div.id = Math.floor(Math.random() * 10 + 1) //random id will be given XD
+    div.setAttribute('title', 'generated title')
+    /*
+    <div class="main" id="9" title="generated title"></div>
+    */
+
+
+    //***** now append the child to the body *******
+    //w/o appending no changes will be visible in our document , only an element is created not appended
+    document.body.appendChild(div)
+
+
+    //******* add texting and styling it ********
+    //one way is 
+    // div.innerText = "Hello ji"
+
+    //another way
+    const textAdded = document.createTextNode("hello ji ! Priyanka this side")
+    div.appendChild(textAdded)
+    div.style.backgroundColor = "yellow"
+    div.style.color = "black"
+    div.style.padding = "12px"
+    div.style.borderRadius = "20px"
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: darkblue; color:white">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    
+    
+    
+    
+    
+
+    function addLanguage(langName) {
+        const liItem = document.createElement('li')
+        liItem.innerHTML = `${langName}` //due to innerHTML full tree is traversed
+        document.querySelector('.language').appendChild(liItem)
+    }
+    function addLanguageOptimized(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguageOptimized("Java")
+    addLanguageOptimized("Cpp")
+
+    //******** edit element ********
+    const secLang = document.querySelector("li:nth-child(2)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    secLang.replaceWith(newLi)
+
+    //one more method of editing
+    const firstLang = document.querySelector("li:nth-child(1)")
+    // firstLang.outerHTML = '<li>Python<li>'
+
+
+    //***** remove ******
+    const lastChild = document.querySelector("li:last-child")
+    lastChild.remove()
+
+    
+</script>
+</html>
