@@ -1,46 +1,3 @@
-# Projects related to DOM 
-
-## project link
-[click here](https://stackblitz.com/edit/dom-project-chaiaurcode?file=index.html)
-
-### solution code
-
-## project 1
-### colour changer
-
-```javascript
-const buttons = document.querySelectorAll('.button')
-console.log(buttons)
-const body = document.querySelector("body")
-
-buttons.forEach(function (button) {
-  console.log(button)
-  button.addEventListener('click', function(e) {
-    console.log(e)
-    console.log(e.target)
-    body.style.backgroundColor = e.target.id
-  })
-})
-```
-
-## project 2
-### digital clock
-
-```javascript
-
-const clock = document.getElementById('clock')
-
-
-setInterval(function(){
-    let date = new Date();
-    clock.innerHTML = date.toLocaleTimeString()
-}, 1000)
-
-```
-
-## project 3
-### bmi calculator
-```javascript
 const form = document.querySelector('form');
 // this usecase will give you empty
 // const height = parseInt(document.querySelector('#height').value)
@@ -62,5 +19,3 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
-```
-
